@@ -1,0 +1,19 @@
+import pygame
+import sys
+pygame.init()
+ANCHO,ALTO=1950,990
+pantalla=pygame.display.set_mode((ANCHO,ALTO))
+pygame.display.set_caption("pokemon es mates")
+tiempo=pygame.time.Clock()
+
+fuente=pygame.front.SysFont("arial",60)
+texto=fuente.render("bienvenido a pokemon de las mates")
+juego=True
+while juego:
+    for evento in pygame.event.get():
+        if evento.type==pygame.QUIT:
+            juego=False
+    pantalla.fill("white")
+    pygame.display.flip()
+    tiempo.tick(60) 
+pygame.quit()      
